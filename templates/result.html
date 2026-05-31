@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>Resume Analysis Result</h1>
+
+        <div class="result-box">
+            <h2>Predicted Job Role</h2>
+            <p>{{ category }}</p>
+        </div>
+
+        <div class="result-box">
+            <h2>Detected Skills</h2>
+
+            <ul>
+                {% for skill in skills %}
+                    <li>{{ skill }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <a href="/">Upload Another Resume</a>
+
+    </div>
+
+</body>
+</html>
